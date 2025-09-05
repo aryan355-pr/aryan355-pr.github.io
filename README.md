@@ -13,7 +13,7 @@ This repository hosts my online CV for academic and professional opportunities.
 ## Development
 - `index.html`, `styles.css`, `script.js`  
 - Uses CSS variables for theming and responsiveness (print-friendly)
-- This is created from scratch by help of chatgpt.
+- This is created from scratch with help of chatgpt.
 
 ## Inspiration
 - From MIT (https://www.rle.mit.edu/boib/#/)
