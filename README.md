@@ -15,5 +15,5 @@ This repository hosts my online CV for academic and professional opportunities.
 - Uses CSS variables for theming and responsiveness (print-friendly)
 - This is created from scratch with help of chatgpt.
 
-## Credit 
+## Website Design Credit 
 - All credit goes to MIT (https://www.rle.mit.edu/boib/#/)
