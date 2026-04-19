@@ -4,7 +4,7 @@
 ### Engineering the Future of Medical AI & Geometric Deep Learning
 
 [![Live Site](https://img.shields.io/badge/Live-Site-007bff?style=for-the-badge&logo=github)](https://aryan355-pr.github.io)
-[![Research Focus](https://img.shields.io/badge/Focus-Ophthalmic_AI-43cea2?style=for-the-badge)](https://aryan355-pr.github.io/research.html)
+[![Research Focus](https://img.shields.io/badge/Focus-GDL-43cea2?style=for-the-badge)](https://aryan355-pr.github.io/research.html)
 [![Architecture](https://img.shields.io/badge/Architecture-Jekyll--SPA-f8ffae?style=for-the-badge&logo=jekyll&logoColor=black)](https://aryan355-pr.github.io)
 
 ---
