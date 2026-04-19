@@ -6,7 +6,7 @@ categories: [GNN, Medical Vision]
 ---
 
 > **TL;DR**
-> Standard CNNs overfit to the global intensity template of retinal fundus images, failing to capture the intrinsic geometry of the vascular tree. Representing the retina as a non-Euclidean graph eliminates this bias entirely and forms the foundation of my MICCAI 2026 submission.
+> Standard CNNs overfit to the global intensity template of retinal fundus images, failing to capture the intrinsic geometry of the vascular tree. Representing the retina as a non-Euclidean graph eliminates this bias entirely and forms the foundation of my current research submission to a top-tier medical vision conference.
 
 ---
 

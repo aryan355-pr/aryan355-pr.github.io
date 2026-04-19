@@ -13,6 +13,15 @@
 
 </div>
 
+## ⚡ Recent Research Pulse
+
+*   **[Apr 2026]** — **Technical Post**: Published "The Morphological Failure of CNNs: Why I Pivoted to GNNs" in the Technical Journal.
+*   **[Apr 2026]** — **Grant Verified**: Confirmed CDAC-Param Rudra GPU Grant for high-performance geometric vision pipelines.
+*   **[Mar 2026]** — **Manuscript Submitted**: Research on topological vascular regression is currently **Under Review** at a top-tier Medical Vision conference.
+*   **[Feb 2026]** — **Core Pivot**: Completed transition from grid-based CNNs to Message-Passing GNNs for non-Euclidean manifold regression.
+
+---
+
 ## 🔬 Research Thesis
 My work identifies and addresses architectural inefficiencies in **Medical Imaging Foundation Models**. Specifically, I am investigating the pivot from traditional grid-based MLP/CNN regression to **Geometric Graph Neural Networks (GNNs)**. The goal is to preserve biological coordinate priors in regression, preventing model collapse into mean-population predictions.
 
