@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | default: 'Aryan Bijva' }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div id="ambient-artifacts"></div>
+  <div class="container" id="app">
+    
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="{{ '/' | relative_url }}" class="nav-item">Dashboard</a>
+          <a href="{{ '/research.html' | relative_url }}" class="nav-item">Project Archive</a>
+          <a href="{{ '/journal.html' | relative_url }}" class="nav-item">Technical Journal</a>
+          <a href="{{ '/collaborate.html' | relative_url }}" class="nav-item highlight">Collaborate</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="topbar">
+      <div class="name-block">
+        <div class="dynamic-shape-container" id="staticLogo" aria-hidden="true">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Aryan Bijva" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+        <div class="headline">
+          <h1>Aryan Bijva</h1>
+          <p class="role">Undergraduate Researcher · B.E. Computer Science and Engineering <p>(GEC Patan)</p></p>
+        </div>
+      </div>
+
+      <div class="contact-header">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:aryanbijva198@gmail.com">aryanbijva198@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/aryan-bijva-cs2027" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> · 
+          <a href="https://github.com/aryan355-pr" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="themeToggle">Toggle Mode</button>
+        <a class="btn" id="downloadCv" href="{{ '/CVAryan.pdf' | relative_url }}" download="CVAryan.pdf">Download CV (PDF)</a>
+      </div>
+    </header>
+
+    {{ content }}
+
+    <footer class="footer-professional card">
+      <div class="footer-content" style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        
+        <div class="footer-brand" style="flex: 1 1 auto; min-width: 180px;">
+          <h3 class="gradient-text" style="font-size: 1.25rem; margin: 0 0 10px 0;">Aryan Bijva</h3>
+          <p class="desc" style="max-width: 250px; margin: 0; line-height: 1.4;">Advancing Medical Vision & Geometric Deep Learning.</p>
+        </div>
+        
+        <div class="footer-grants" style="flex: 1 1 auto; min-width: 180px;">
+          <h3 style="font-size: 1.25rem; margin: 0 0 10px 0; color: var(--text);">Grants & Compute</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="{{ '/research/param-rudra-grant.html' | relative_url }}" class="footer-link"><i class="fas fa-network-wired" style="margin-right: 5px;"></i> PARAM Rudra (CDAC)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-socials" style="flex: 0 1 auto; min-width: 140px; padding-top: 2px; display: flex; gap: 12px;">
+          <a href="mailto:aryanbijva198@gmail.com" class="social-icon" aria-label="Email" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/aryan-bijva-cs2027" target="_blank" class="social-icon" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/aryan355-pr" target="_blank" class="social-icon" aria-label="GitHub" style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+
+        <div class="footer-institute" style="text-align: right; flex: 1 1 auto; min-width: 270px;">
+          <h3 style="font-size: 1.25rem; margin: 0 0 10px 0; color: var(--text);">Home Institute</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 6px;"><a href="http://www.gecpatan.ac.in/" target="_blank" class="footer-link"><i class="fas fa-university" style="margin-right: 5px;"></i> Government Engineering College</a></li>
+            <li style="margin-bottom: 2px; font-size: 0.85em; color: var(--muted); opacity: 0.8;">At & Post: Katpur, Patan</li>
+            <li style="margin-bottom: 0; font-size: 0.85em; color: var(--muted); opacity: 0.8;">Gujarat 384265, India</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom" style="text-align: center;">
+        <p style="margin: 0;">&copy; <span id="year"></span> Aryan Bijva. I support open Science.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="{{ '/script.js' | relative_url }}?v=1.0.1"></script>
+</body>
+</html>

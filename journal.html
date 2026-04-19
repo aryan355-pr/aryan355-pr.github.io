@@ -1,0 +1,109 @@
+---
+layout: default
+title: "Technical Journal | Aryan Bijva"
+---
+
+<main class="grid-one-column">
+  <section class="card main-content" style="padding: 0; overflow: hidden;">
+
+    <!-- Banner -->
+    <div style="
+      background: linear-gradient(135deg, rgba(67,206,162,0.2) 0%, rgba(91,155,213,0.15) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 44px;
+      position: relative; overflow: hidden;
+    ">
+      <div style="position: absolute; top: -40px; right: -20px; width: 180px; height: 180px; border-radius: 50%; background: rgba(67,206,162,0.06);"></div>
+      <div style="position: relative;">
+        <span style="
+          display: inline-block;
+          background: rgba(91,155,213,0.15);
+          border: 1px solid rgba(91,155,213,0.35);
+          color: var(--accent);
+          font-size: 0.76rem; font-weight: 700; letter-spacing: 1px;
+          text-transform: uppercase; padding: 3px 11px; border-radius: 20px; margin-bottom: 12px;
+        ">Research Engineering Log</span>
+        <h1 style="margin: 0 0 8px; font-size: 1.9rem; color: var(--text);">Technical Journal</h1>
+        <p style="margin: 0; color: var(--muted); font-size: 0.97rem; line-height: 1.6; max-width: 520px;">
+          Chronological documentation of experiments, architectural pivots, failure post-mortems, and mathematical derivations in Medical Vision &amp; Geometric Deep Learning.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div style="
+      display: flex; gap: 32px; flex-wrap: wrap;
+      padding: 16px 44px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      font-size: 0.85rem; color: var(--muted);
+    ">
+      <span><strong style="color: var(--text);">{{ site.posts | size }}</strong> entries</span>
+      {% if site.posts.first %}
+      <span>Latest: <strong style="color: var(--text);">{{ site.posts.first.date | date: "%b %d, %Y" }}</strong></span>
+      {% endif %}
+    </div>
+
+    <!-- Post List -->
+    <div style="padding: 36px 44px; display: flex; flex-direction: column; gap: 28px;">
+
+      {% if site.posts.size == 0 %}
+        <p style="color: var(--muted); text-align: center; padding: 40px 0;">No journal entries yet. First post coming soon.</p>
+      {% else %}
+        {% for post in site.posts %}
+          <article style="
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px 30px;
+            background: var(--card-bg);
+            transition: box-shadow 0.2s ease, transform 0.15s ease;
+          "
+          onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.1)';this.style.transform='translateY(-1px)';"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
+
+            <!-- Meta line -->
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
+              <span style="font-size: 0.78rem; color: var(--muted); font-family: 'Source Code Pro', monospace;">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </span>
+              {% if post.categories %}
+                {% for cat in post.categories %}
+                  <span style="
+                    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
+                    text-transform: uppercase; padding: 2px 9px; border-radius: 12px;
+                    background: rgba(91,155,213,0.12); color: var(--accent);
+                    border: 1px solid rgba(91,155,213,0.25);
+                  ">{{ cat }}</span>
+                {% endfor %}
+              {% endif %}
+            </div>
+
+            <!-- Title -->
+            <h2 style="margin: 0 0 10px; font-size: 1.2rem; line-height: 1.4;">
+              <a href="{{ post.url | relative_url }}" style="color: var(--text); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent)';" onmouseout="this.style.color='var(--text)';">
+                {{ post.title }}
+              </a>
+            </h2>
+
+            <!-- Excerpt -->
+            <p style="margin: 0 0 16px; color: var(--muted); font-size: 0.92rem; line-height: 1.65;">
+              {{ post.excerpt | strip_html | truncate: 220 }}
+            </p>
+
+            <!-- Read more -->
+            <a href="{{ post.url | relative_url }}" style="
+              font-size: 0.85rem; font-weight: 600; color: var(--accent);
+              text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+              transition: gap 0.2s ease;
+            "
+            onmouseover="this.style.gap='8px';" onmouseout="this.style.gap='4px';">
+              Read Full Analysis <span>→</span>
+            </a>
+          </article>
+        {% endfor %}
+      {% endif %}
+
+    </div>
+  </section>
+</main>

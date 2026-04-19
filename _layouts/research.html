@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<main class="grid-one-column">
+  <section class="card main-content" style="padding: 40px;">
+    
+    <!-- Document Header -->
+    {% if page.title %}
+      <h1 class="gradient-text" style="font-size: 2.2rem; margin-top: 0; margin-bottom: 10px;">{{ page.title }}</h1>
+    {% endif %}
+    
+    <!-- Document Metadata Tags -->
+    {% if page.status or page.project %}
+      <div style="margin-bottom: 40px; display: flex; gap: 20px; color: var(--muted); font-size: 0.95rem; border-bottom: 1px solid var(--border); padding-bottom: 15px;">
+        {% if page.status %}
+          <span style="display: flex; align-items: center; gap: 8px;">
+            <span style="
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: #22c55e;
+              box-shadow: 0 0 0 0 rgba(34,197,94,0.6);
+              animation: pulse-green 2s infinite;
+              flex-shrink: 0;
+            "></span>
+            {{ page.status }}
+          </span>
+        {% endif %}
+        {% if page.project %}
+          <span><i class="fas fa-network-wired" style="color: #a1a1aa; margin-right: 8px;"></i>{{ page.project }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <!-- Markdown Execution Body -->
+    <div class="research-markdown-body" style="line-height: 1.7; color: var(--text);">
+      {{ content }}
+    </div>
+    
+  </section>
+</main>

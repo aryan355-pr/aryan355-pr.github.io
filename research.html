@@ -1,0 +1,92 @@
+---
+layout: default
+title: "Project Archive | Aryan Bijva"
+---
+<main class="grid-one-column">
+  <section class="card main-content" style="padding: 0; overflow: hidden;">
+
+    <!-- Banner -->
+    <div style="
+      background: linear-gradient(135deg, rgba(91,155,213,0.2) 0%, rgba(67,206,162,0.15) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 44px;
+      position: relative; overflow: hidden;
+    ">
+      <div style="position: absolute; top: -40px; right: -20px; width: 180px; height: 180px; border-radius: 50%; background: rgba(91,155,213,0.06);"></div>
+      <div style="position: relative;">
+        <span style="
+          display: inline-block;
+          background: rgba(67,206,162,0.15);
+          border: 1px solid rgba(67,206,162,0.35);
+          color: var(--accent);
+          font-size: 0.76rem; font-weight: 700; letter-spacing: 1px;
+          text-transform: uppercase; padding: 3px 11px; border-radius: 20px; margin-bottom: 12px;
+        ">Full Research Portfolio</span>
+        <h1 style="margin: 0 0 8px; font-size: 1.9rem; color: var(--text);">Project Archive</h1>
+      </div>
+    </div>
+
+    <!-- Padding for content -->
+    <div style="padding: 36px 44px;">
+
+      <!-- Project Filter UI -->
+      <div class="filter-wrapper" style="margin-bottom: 30px; display: flex; gap: 12px; align-items: center;">
+        <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--muted); margin-right: 8px;">Filter By:</span>
+        <label class="filter-pill">
+          <input type="checkbox" id="filter-ongoing" class="filter-checkbox" checked>
+          <span class="filter-label"><i class="fas fa-spinner"></i> Ongoing</span>
+        </label>
+        <label class="filter-pill">
+          <input type="checkbox" id="filter-completed" class="filter-checkbox" checked>
+          <span class="filter-label"><i class="fas fa-check-circle"></i> Completed</span>
+        </label>
+      </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT CARD 1 -->
+      <article class="project-card" data-status="completed" data-priority="2">
+        <div class="project-header">
+          <h3>Continuous Regression of RNFL using MLP</h3>
+          <span class="news-date">Completed</span>
+          <p class="meta"><strong>Focus:</strong> Multilayer Perceptrons & Medical Imaging</p>
+        </div>
+        <div class="project-image">
+          <img src="{{ '/assets/images/project_archive/proof_of_mean_population_claim.png' | relative_url }}" alt="MLP Regression Result - Mean Population Claim">
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p>A study focused on continuous regression of Retinal Nerve Fiber Layer (RNFL) data using Multilayer Perceptrons. Through this work, we identified a critical limitation in which the model exhibited a strong tendency to fall back to predicting the mean population value.</p>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-small">Read Full Paper →</a>
+            <a href="https://github.com/aryan355-pr" target="_blank" class="btn-small bg-transparent"><i class="fab fa-github"></i> Code</a>
+            <span style="font-size: 0.75rem; color: #ff4d4d; margin-left: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">(Work under review — Code available after results)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT CARD 2 -->
+      <article class="project-card" data-status="ongoing" data-priority="1">
+        <div class="project-header">
+          <h3>Continuous Regression using GNN</h3>
+          <span class="news-date">Latest Ongoing</span>
+          <p class="meta"><strong>Focus:</strong> Geometric Deep Learning</p>
+        </div>
+        <div class="project-image">
+          <img src="https://placehold.co/800x400/1e293b/4da6ff?text=currently+going+on" alt="GNN Model">
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p>Transitioning from grid-based architectures to non-Euclidean approaches. This ongoing project leverages Graph Neural Networks (GNNs) for continuous regression, aiming to overcome the limitations and collapsing variance seen in prior baseline models.</p>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-small">Read Analysis →</a>
+            <a href="https://github.com/aryan355-pr" target="_blank" class="btn-small bg-transparent"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>

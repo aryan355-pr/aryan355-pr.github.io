@@ -1,0 +1,150 @@
+---
+layout: default
+title: "Collaborate | Aryan Bijva"
+---
+
+<main class="grid-one-column">
+  <section class="card main-content" style="padding: 0; overflow: hidden;">
+
+    <!-- Header Banner -->
+    <div style="
+      background: linear-gradient(135deg, rgba(67,206,162,0.25) 0%, rgba(248,255,174,0.18) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 48px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    ">
+      <div style="position: absolute; top: -50px; right: -30px; width: 200px; height: 200px; border-radius: 50%; background: rgba(67,206,162,0.08);"></div>
+      <div style="position: absolute; bottom: -70px; left: 40px; width: 260px; height: 260px; border-radius: 50%; background: rgba(248,255,174,0.06);"></div>
+      <div style="position: relative;">
+        <span style="
+          display: inline-block;
+          background: rgba(67,206,162,0.15);
+          border: 1px solid rgba(67,206,162,0.35);
+          color: #2a9d7c;
+          font-size: 0.78rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          padding: 4px 12px;
+          border-radius: 20px;
+          margin-bottom: 12px;
+        ">Open to Collaboration</span>
+        <h1 style="margin: 0 0 10px; font-size: 2rem; color: var(--text);">Let's Collaborate</h1>
+        <p style="margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 500px;">
+          Fill in the form below and I'll typically get back to you within 48 hours but sometimes it can take more time (2–5 days).
+        </p>
+      </div>
+    </div>
+
+    <!-- Form Body -->
+    <div style="padding: 44px 48px;">
+      <form
+        action="https://formspree.io/f/mnjogjnd"
+        method="POST"
+        id="collaborate-form"
+        style="display: flex; flex-direction: column; gap: 24px; max-width: 600px;"
+      >
+
+        <!-- Name + Email row -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;" class="collab-row">
+          <div class="collab-field">
+            <label for="name" class="collab-label">Full Name <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Your full name" class="collab-input">
+          </div>
+          <div class="collab-field">
+            <label for="email" class="collab-label">Email Address <span style="color:#ef4444;">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@institution.edu" class="collab-input">
+          </div>
+        </div>
+
+        <!-- Affiliation -->
+        <div class="collab-field">
+          <label for="affiliation" class="collab-label">Affiliation / Institution</label>
+          <input type="text" id="affiliation" name="affiliation" placeholder="Your university, lab, or organisation" class="collab-input">
+        </div>
+
+        <!-- Subject -->
+        <div class="collab-field">
+          <label for="subject" class="collab-label">Subject <span style="color:#ef4444;">*</span></label>
+          <input type="text" id="subject" name="subject" required placeholder="Brief topic of collaboration" class="collab-input">
+        </div>
+
+        <!-- Message -->
+        <div class="collab-field">
+          <label for="message" class="collab-label">Message <span style="color:#ef4444;">*</span></label>
+          <textarea id="message" name="message" required rows="6" placeholder="Describe your idea, project, or proposal in detail…" class="collab-input" style="resize: vertical; font-family: inherit; line-height: 1.6;"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 4px;">
+          <button type="submit" id="submit-btn" style="
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(135deg, #43cea2, #2a9d7c);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: inherit;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 14px rgba(67,206,162,0.35);
+          "
+          onmouseover="this.style.opacity='0.9';this.style.transform='translateY(-1px)';"
+          onmouseout="this.style.opacity='1';this.style.transform='translateY(0)';"
+          >
+            <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message
+          </button>
+          <span id="form-status" style="font-size: 0.9rem;"></span>
+        </div>
+
+      </form>
+
+      <!-- Divider + Direct contact -->
+      <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+        <span style="color: var(--muted); font-size: 0.88rem;">Prefer direct contact?</span>
+        <a href="mailto:aryanbijva198@gmail.com" style="color: var(--accent); font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
+          <i class="fas fa-envelope"></i> aryanbijva198@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/aryan-bijva-cs2027" target="_blank" style="color: var(--accent); font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+
+
+<script>
+const form = document.getElementById('collaborate-form');
+const status = document.getElementById('form-status');
+const btn = document.getElementById('submit-btn');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right:8px;"></i> Sending…';
+  status.textContent = '';
+
+  const response = await fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    status.innerHTML = '✅ <span style="color:#22c55e;">Message sent! I\'ll be in touch soon.</span>';
+    form.reset();
+  } else {
+    status.innerHTML = '❌ <span style="color:#ef4444;">Something went wrong. Please email me directly.</span>';
+  }
+  btn.disabled = false;
+  btn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send Message';
+});
+</script>

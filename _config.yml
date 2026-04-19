@@ -1,0 +1,8 @@
+title: Aryan Bijva
+description: Geometric Deep Learning & Medical Vision Research Portfolio
+baseurl: ""
+url: ""
+
+collections:
+  research:
+    output: true

@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Aryan Bijva | Dashboard"
+---
+
+<main class="grid-authority">
+  
+  <section class="card main-content">
+    
+    <div id="thesis">
+      <h2>Research Thesis & Direction</h2>
+      <p class="desc">
+        Investigating the structural limitations of Euclidean grid-based CNNs in capturing complex biological morphology. My current methodology leverages **Geometric Deep Learning** to learn representations directly on the graph $G = (V, E)$. 
+      </p>
+      <div class="method-box">
+        <strong>Primary Objective:</strong> Achieving template-invariance in ophthalmic vascular datasets using the **FairFedMed** benchmark.
+      </div>
+    </div>
+
+    <div id="latest-logs">
+      <h2>Latest Technical Post-Mortems</h2>
+      <div class="journal-feed">
+        {% for post in site.posts limit:3 %}
+          <article class="card-sub">
+            <span class="news-date">{{ post.date | date: "%b %d, %Y" }}</span>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+          </article>
+        {% endfor %}
+        <a href="{{ '/journal' | relative_url }}" class="read-more">Access Full Research Journal →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <aside class="sidebar-combined">
+    
+    <section class="card">
+      <h2>Latest News</h2>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">Feb 2026</span>
+          <p>Paper submitted to Medical Vision conference.</p>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Nov 2025</span>
+          <p>Secured CDAC GPU grant for large-scale study.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Professional Armor</h2>
+      <ul class="rigorous-list">
+        <li><strong>Education:</strong> B.E. CSE (GEC Patan)</li>
+        <li><strong>CGPA:</strong> 8.74 / 10.0</li>
+        <li><strong>Grant:</strong> CDAC GPU Research</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Core Stack</h2>
+      <div class="tech-tags">
+        <span>PyTorch Geometric</span>
+        <span>SimpleITK</span>
+        <span>Linux / SLURM</span>
+        <span>OpenCV</span>
+      </div>
+    </section>
+
+  </aside>
+</main>
