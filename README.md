@@ -16,10 +16,9 @@
 ## ⚡ Recent Research Pulse
 
 *   **[Apr 2026]** — **Technical Post**: Published "The Morphological Failure of CNNs: Why I Pivoted to GNNs" in the Technical Journal.
-*   **[Apr 2026]** — **Grant Verified**: Confirmed CDAC-Param Rudra GPU Grant for high-performance geometric vision pipelines.
 *   **[Mar 2026]** — **Manuscript Submitted**: Research on topological vascular regression is currently **Under Review** at a top-tier Medical Vision conference.
 *   **[Feb 2026]** — **Core Pivot**: Completed transition from grid-based CNNs to Message-Passing GNNs for non-Euclidean manifold regression.
-
+*   **[Nov 2025]** — **Grant Verified**: Confirmed CDAC-Param Rudra GPU Grant for high-performance geometric vision pipelines.
 ---
 
 ## 🔬 Research Thesis
