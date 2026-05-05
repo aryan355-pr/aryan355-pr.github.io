@@ -53,7 +53,7 @@ My work identifies and addresses architectural inefficiencies in **Medical Imagi
 ---
 
 ## 🎨 Design & Visual Inspiration
-This portfolio’s interactive particles background and overall minimalist layout were inspired by the **[MIT Research Laboratory of Electronics (RLE)](https://www.rle.mit.edu/boib/#/)**. It aims to emulate the rigor and clarity associated with top-tier research institutions.
+This portfolio’s interactive particles background and overall minimalist layout were inspired by the **[MIT Research Laboratory of Electronics (RLE)](https://www.rle.mit.edu/boib/#/)**.
 
 ---
 
