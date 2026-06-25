@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Morphological Failure of CNNs: Why I Pivoted to GNNs"
+title: "The Morphological Failure: Why I Pivoted to GNNs"
 date: 2026-04-01
 categories: [GNN, Medical Vision]
 ---
@@ -38,7 +38,4 @@ By pivoting to a Graph Neural Network with a locked $$k=2$$ neighborhood, we mat
 * The GNN provides the **spatial priors** (preventing random noise hallucinations).
 * The Dual Loss provides the **geometric tension** (forcing the GNN to drop into the anatomical notches instead of over-smoothing).
 
-They are entirely co-dependent.
-
-When reviewers or readers assess this work, they will look for this exact level of architectural maturity. They do not want methods that just throw random PyTorch layers at a wall; they want to see how we can mathematically diagnose why a standard ViT fails and engineer the exact topological constraint required to fix it.
 
