@@ -166,10 +166,40 @@ body.dark .main-nav { background: rgba(15, 23, 42, 0.3); }
     margin: 0 auto;
     padding: 12px 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-links { display: flex; gap: 30px; }
+.nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text);
+    letter-spacing: -0.2px;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.nav-brand:hover {
+    color: var(--accent);
+}
+
+.nav-subbrand {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--muted);
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .nav-subbrand {
+        display: none;
+    }
+}
+
+.nav-links { display: flex; gap: 24px; align-items: center; }
 
 .nav-item {
     text-decoration: none;
@@ -223,58 +253,21 @@ body.dark .main-nav { background: rgba(15, 23, 42, 0.3); }
 .topbar .role { font-weight: 400; margin-top:4px; color: rgba(255,255,255,0.9); }
 .topbar .subtitle { font-size: 0.9rem; color: rgba(255,255,255,0.85); }
 
-/* Dynamic Lab Artifact (Math Engine) Styles */
-.dynamic-shape-container, .ambient-artifact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-  pointer-events: none;
-}
-
+/* Dynamic Lab Artifact Logo Container */
 .dynamic-shape-container {
-  width: 62px;
-  height: 62px;
-  background: var(--accent-light);
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   overflow: visible;
-}
-
-#ambient-artifacts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; 
   pointer-events: none;
-  overflow: hidden;
-}
-
-.ambient-artifact {
-  position: absolute;
-  opacity: 0.15; /* Increased from 0.1 to show delicate latent lines */
-  transition: opacity 0.5s ease;
-}
-
-body.dark .ambient-artifact {
-  opacity: 0.22; /* Increased from 0.18 for better glow in dark mode */
-}
-
-canvas.math-artifact {
-  max-width: 100%;
-  max-height: 100%;
-  filter: drop-shadow(0 0 5px var(--accent));
-}
-
-@keyframes drifting {
-  from { transform: translate(0, 0); }
-  to { transform: translate(30px, 40px); }
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  position: relative;
 }
 
 /* Controls */

@@ -4,18 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | default: 'Aryan Bijva' }}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div id="particles-js"></div>
-  <div id="ambient-artifacts"></div>
   <div class="container" id="app">
     
     <nav class="main-nav">
       <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-brand">Aryan Bijva <span class="nav-subbrand">· Medical Vision &amp; GDL</span></a>
         <div class="nav-links">
           <a href="{{ '/' | relative_url }}" class="nav-item">Dashboard</a>
           <a href="{{ '/research.html' | relative_url }}" class="nav-item">Project Archive</a>
@@ -32,7 +40,7 @@
         </div>
         <div class="headline">
           <h1>Aryan Bijva</h1>
-          <p class="role">Undergraduate Researcher · B.E. Computer Science and Engineering <p>(GEC Patan)</p></p>
+          <p class="role">Undergraduate Researcher · B.E. Computer Science and Engineering <span>(GEC Patan)</span></p>
         </div>
       </div>
 
@@ -45,7 +53,7 @@
       </div>
 
       <div class="controls">
-        <button class="btn" id="themeToggle">Toggle Mode</button>
+        <button class="btn" id="themeToggle"><i class="fas fa-moon" style="margin-right: 6px;"></i> <span>Dark Mode</span></button>
         <a class="btn" id="downloadCv" href="{{ '/assets/pdf/CVAryan.pdf' | relative_url }}" download="CVAryan.pdf">Download CV (PDF)</a>
       </div>
     </header>

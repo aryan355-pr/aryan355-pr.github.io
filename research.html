@@ -47,22 +47,38 @@ title: "Project Archive | Aryan Bijva"
       <!-- PROJECT CARD 1 -->
       <article class="project-card" data-status="completed" data-priority="2">
         <div class="project-header">
-          <h3>Continuous Regression of RNFL using MLP</h3>
-          <span class="news-date">Completed</span>
-          <p class="meta"><strong>Focus:</strong> Multilayer Perceptrons & Medical Imaging</p>
+          <h3>Diagnosing Adaptation Failure Modes in Foundation Models for RNFL Thickness Prediction</h3>
+          <span class="news-date" style="background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.35); padding: 4px 10px; border-radius: 12px; font-weight: 700; letter-spacing: 0.5px;">Oral @ MICCAI OMIA 2026</span>
+          <p class="meta"><strong>Venue:</strong> 13th Ophthalmic Medical Image Analysis Workshop (MICCAI 2026) · <strong>Format:</strong> Oral Paper</p>
         </div>
         <div class="project-image">
-          <img src="{{ '/assets/images/project_archive/proof_of_mean_population_claim.png' | relative_url }}" alt="MLP Regression Result - Mean Population Claim">
+          <img src="{{ '/assets/images/project_archive/proof_of_mean_population_claim.png' | relative_url }}" alt="RNFL Foundation Model Adaptation Failure and Variance Collapse Analysis">
         </div>
         <div class="project-content">
           <div class="project-description">
-            <p>A study focused on continuous regression of Retinal Nerve Fiber Layer (RNFL) data using Multilayer Perceptrons. Through this work, we identified a critical limitation in which the model exhibited a strong tendency to fall back to predicting the mean population value.</p>
+            <p>Standard classification-centric adaptation protocols (progressive layer freezing, Pearson losses) paradoxically degrade continuous dense metric regression by <strong>18–32%</strong> on en face IR-SLO fundus imaging. We identify two distinct failure modes in foundation models like RETFound (ViT-L/16) and demonstrate that a first-order gradient penalty probe restores patient-specific prediction variance ($\sigma_{\text{pred}} \approx 11.8\,\mu\text{m}$) without compromising global accuracy ($19.04 \pm 0.03\,\mu\text{m}$).</p>
           </div>
-          <div class="project-actions">
-            <a href="#" class="btn-small">Read Full Paper →</a>
-            <a href="https://github.com/aryan355-pr" target="_blank" class="btn-small bg-transparent"><i class="fab fa-github"></i> Code</a>
-            <span style="font-size: 0.75rem; color: #ff4d4d; margin-left: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">(Work under review — Code available after results)</span>
+          <div class="project-actions" style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <a href="https://github.com/aryan355-pr/radial-aggregator-rnfl" target="_blank" class="btn-small"><i class="fab fa-github"></i> Code &amp; Benchmark</a>
+            <span style="font-size: 0.78rem; color: #22c55e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fas fa-check-circle"></i> Oral Paper Accepted</span>
           </div>
+
+          <details style="margin-top: 14px;">
+            <summary style="cursor: pointer; font-size: 0.82rem; font-weight: 600; color: var(--accent); user-select: none; display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fas fa-quote-right"></i> Cite (BibTeX)
+            </summary>
+            <div style="margin-top: 10px; position: relative;">
+              <button type="button" class="copy-bibtex-btn" onclick="copyBibtex(this)" style="position: absolute; top: 10px; right: 12px; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.1); border: 1px solid var(--border); color: var(--text); cursor: pointer; display: inline-flex; align-items: center; gap: 5px; transition: all 0.2s ease;">
+                <i class="far fa-copy"></i> <span>Copy</span>
+              </button>
+              <pre id="bibtex-content" style="margin: 0; padding: 16px 20px; border-radius: 8px; background: rgba(13,17,23,0.85); font-family: 'Source Code Pro', monospace; font-size: 0.8rem; line-height: 1.5; overflow-x: auto; border: 1px solid var(--border); color: #e6eef0;">@inproceedings{bijva2026diagnosing,
+  title={Diagnosing Adaptation Failure Modes in Foundation Models for RNFL Thickness Prediction},
+  author={Bijva, Aryan},
+  booktitle={13th Ophthalmic Medical Image Analysis Workshop (OMIA), MICCAI},
+  year={2026}
+}</pre>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -73,15 +89,12 @@ title: "Project Archive | Aryan Bijva"
           <span class="news-date">Latest Ongoing</span>
           <p class="meta"><strong>Focus:</strong> Geometric Deep Learning</p>
         </div>
-        <div class="project-image">
-          <img src="https://placehold.co/800x400/1e293b/4da6ff?text=currently+going+on" alt="GNN Model">
-        </div>
         <div class="project-content">
           <div class="project-description">
             <p>Transitioning from grid-based architectures to non-Euclidean approaches. This ongoing project leverages Graph Neural Networks (GNNs) for continuous regression, aiming to overcome the limitations and collapsing variance seen in prior baseline models.</p>
           </div>
           <div class="project-actions">
-            <a href="#" class="btn-small">Read Analysis →</a>
+            <a href="{{ '/gnn/medical%20vision/2026/04/01/cnn-to-gnn-pivot.html' | relative_url }}" class="btn-small">Read Analysis →</a>
             <a href="https://github.com/aryan355-pr" target="_blank" class="btn-small bg-transparent"><i class="fab fa-github"></i> Code</a>
           </div>
         </div>

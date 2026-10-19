@@ -18,23 +18,30 @@ title: "Aryan Bijva | Research Portal"
 
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
   <div id="particles-js"></div>
-  <div id="ambient-artifacts"></div>
 
   <div class="container" id="app">
 
     <nav class="main-nav">
       <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-brand">Aryan Bijva <span class="nav-subbrand">· Medical Vision &amp; GDL</span></a>
         <div class="nav-links">
-          <a href="index.html" class="nav-item">Dashboard</a>
-          <a href="research.html" class="nav-item">Project Archive</a>
-          <a href="journal.html" class="nav-item">Technical Journal</a>
-          <a href="collaborate.html" class="nav-item highlight">Collaborate</a>
+          <a href="{{ '/' | relative_url }}" class="nav-item">Dashboard</a>
+          <a href="{{ '/research.html' | relative_url }}" class="nav-item">Project Archive</a>
+          <a href="{{ '/journal.html' | relative_url }}" class="nav-item">Technical Journal</a>
+          <a href="{{ '/collaborate.html' | relative_url }}" class="nav-item highlight">Collaborate</a>
         </div>
       </div>
     </nav>
@@ -46,7 +53,7 @@ title: "Aryan Bijva | Research Portal"
         </div>
         <div class="headline">
           <h1>Aryan Bijva</h1>
-          <p class="role">Undergraduate Researcher · B.E. Computer Science and Engineering <p>(GEC Patan)</p></p>
+          <p class="role">Undergraduate Researcher · B.E. Computer Science and Engineering <span>(GEC Patan)</span></p>
         </div>
       </div>
 
@@ -60,60 +67,30 @@ title: "Aryan Bijva | Research Portal"
       </div>
 
       <div class="controls">
-        <button class="btn" id="themeToggle">Toggle Mode</button>
+        <button class="btn" id="themeToggle"><i class="fas fa-moon" style="margin-right: 6px;"></i> <span>Dark Mode</span></button>
         <a class="btn" id="downloadCv" href="{{ '/assets/pdf/CVAryan.pdf' | relative_url }}" download="CVAryan.pdf">Download CV
           (PDF)</a>
       </div>
     </header>
 
     <main class="grid-two-column-left">
-
       <aside class="card sidebar-left">
         <section id="news">
           <h2>Latest News</h2>
           <ul class="news-list">
             <li class="news-item">
-              <span class="news-date">Feb 2026</span>
-              <p>Paper submitted to Medical Vision conference.</p>
+              <span class="news-date" style="color: #22c55e; font-weight: 800;">Sep 2026 · Major Milestone</span>
+              <p>🎉 Paper accepted as an <strong>Oral Presentation at MICCAI OMIA 2026</strong>: <em>"Diagnosing Adaptation Failure Modes in Foundation Models for RNFL Thickness Prediction"</em>! Code on <a href="https://github.com/aryan355-pr/radial-aggregator-rnfl" target="_blank" style="color: var(--accent); font-weight: 600; text-decoration: none;">GitHub</a>.</p>
             </li>
             <li class="news-item">
               <span class="news-date">Nov 2025</span>
-              <p>Secured CDAC GPU grant for large-scale study.</p>
+              <p>Secured national GPU grant on <a href="{{ '/research/param-rudra-grant.html' | relative_url }}" style="color: var(--accent); font-weight: 600; text-decoration: none;">PARAM Rudra (CDAC)</a> supercomputing cluster.</p>
+            </li>
+            <li class="news-item">
+              <span class="news-date">Oct 2025</span>
+              <p>Benchmarking non-Euclidean geometric priors for dense regression over standard CNN baselines.</p>
             </li>
           </ul>
-        </section>
-
-        </section>
-
-        <!-- Vertical Research Verification (No Heading) -->
-        <section id="verification" style="margin-top: 25px;">
-          <div class="verification-container" style="aspect-ratio: 3/4; border-radius: 12px; overflow: hidden; background: var(--card-bg); border: 1px solid var(--border);">
-            <div class="carousel-track" id="carouselTrack">
-              <!-- Slide 1 -->
-              <div class="carousel-slide active">
-                <img src="{{ '/assets/images/proofs/1.jpg' | relative_url }}" alt="PARAM Rudra Grant Proof" style="object-fit: contain; background: #000;">
-                <div class="carousel-caption" style="font-size: 0.8rem; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);">PARAM Rudra (CDAC) Grant</div>
-              </div>
-              <!-- Additional Slides -->
-              <div class="carousel-slide">
-                <img src="{{ '/assets/images/proofs/2.jpg' | relative_url }}" alt="Top-tier Submission" style="object-fit: cover;">
-                <div class="carousel-caption" style="font-size: 0.8rem; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);">Top-tier Conference Submission (Under Review)</div>
-              </div>
-              <!-- <div class="carousel-slide">
-                <img src="https://placehold.co/600x800/0f172a/43cea2?text=Merit+1" alt="Proof 3" style="object-fit: cover;">
-                <div class="carousel-caption" style="font-size: 0.8rem; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);">MedVision AI Merit</div>
-              </div> -->
-            </div>
-            <!-- Navigation Buttons -->
-            <button class="carousel-nav prev" id="prevBtn" aria-label="Previous Slide">‹</button>
-            <button class="carousel-nav next" id="nextBtn" aria-label="Next Slide">›</button>
-            <!-- Smaller dots for sidebar -->
-            <div class="carousel-dots" style="bottom: 8px; right: 10px;">
-              <span class="dot active" style="width: 5px; height: 5px;"></span>
-              <span class="dot" style="width: 5px; height: 5px;"></span>
-              <span class="dot" style="width: 5px; height: 5px;"></span>
-            </div>
-          </div>
         </section>
       </aside>
 
@@ -134,9 +111,10 @@ title: "Aryan Bijva | Research Portal"
           <p>
             I am a 3rd-year Computer Science and Engineering student at Government Engineering College, Patan (Expected
             June 2027), maintaining a 8.74/10.0 CGPA. My academic trajectory is singular: I am preparing for a PhD at
-            MIT EECS (Fall 2027). I have already secured national-level GPU compute grants from CDAC and am currently
-            benchmarking novel geometric constraints for dense regression, moving beyond standard classification into
-            the more rigorous domain of pixel-level medical metrics.
+            MIT EECS (Fall 2027). I have authored an accepted Oral Paper at MICCAI OMIA 2026 on foundation model adaptation
+            failure modes, secured national-level GPU compute grants from CDAC, and am currently benchmarking novel
+            geometric constraints for dense regression, moving beyond standard classification into the more rigorous
+            domain of continuous pixel-level medical metrics.
           </p>
         </section>
 

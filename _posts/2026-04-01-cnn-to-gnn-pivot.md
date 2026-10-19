@@ -33,7 +33,7 @@ But we cannot enforce a 1D topological penalty on an architecture that lacks 1D 
 
 This is why the `TopologyGNN` is not just a fancy add-on; it is the fundamental framework.
 
-By pivoting to a Graph Neural Network with a locked $$k=2$$ neighborhood, we mathematically constrained the network's receptive field to a $$13^\circ$$ window. We built the physical tracks for the loss function to run on.
+By pivoting to a Graph Neural Network with a locked $k=2$ neighborhood, we mathematically constrained the network's receptive field to a $13^\circ$ window. We built the physical tracks for the loss function to run on.
 
 * The GNN provides the **spatial priors** (preventing random noise hallucinations).
 * The Dual Loss provides the **geometric tension** (forcing the GNN to drop into the anatomical notches instead of over-smoothing).
