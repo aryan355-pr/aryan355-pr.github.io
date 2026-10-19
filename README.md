@@ -4,6 +4,7 @@
 ### Engineering the Future of Medical AI & Geometric Deep Learning
 
 [![Live Site](https://img.shields.io/badge/Live-Site-007bff?style=for-the-badge&logo=github)](https://aryan355-pr.github.io)
+[![Paper](https://img.shields.io/badge/MICCAI%20OMIA%202026-Oral%20Paper-22c55e?style=for-the-badge)](https://github.com/aryan355-pr/radial-aggregator-rnfl)
 [![Research Focus](https://img.shields.io/badge/Focus-GDL-43cea2?style=for-the-badge)](https://aryan355-pr.github.io/research.html)
 [![Architecture](https://img.shields.io/badge/Architecture-Jekyll--SPA-f8ffae?style=for-the-badge&logo=jekyll&logoColor=black)](https://aryan355-pr.github.io)
 
@@ -15,10 +16,11 @@
 
 ## ⚡ Recent Research Pulse
 
-*   **[Apr 2026]** — **Technical Post**: Published "The Morphological Failure of CNNs: Why I Pivoted to GNNs" in the Technical Journal.
-*   **[Mar 2026]** — **Manuscript Submitted**: Research on topological vascular regression is currently **Under Review** at a top-tier Medical Vision conference.
-*   **[Feb 2026]** — **Core Pivot**: Completed transition from grid-based CNNs to Message-Passing GNNs for non-Euclidean manifold regression.
-*   **[Nov 2025]** — **Grant Verified**: Confirmed CDAC-Param Rudra GPU Grant for high-performance geometric vision pipelines.
+*   **[Sep 2026]** — **🎉 Oral Paper Accepted @ MICCAI OMIA 2026**: *"Diagnosing Adaptation Failure Modes in Foundation Models for RNFL Thickness Prediction"* accepted as an **Oral Presentation** at the 13th Ophthalmic Medical Image Analysis Workshop, MICCAI 2026. Code & benchmark published on [GitHub (`radial-aggregator-rnfl`)](https://github.com/aryan355-pr/radial-aggregator-rnfl).
+*   **[Apr 2026]** — **Technical Post**: Published [*"The Morphological Failure: Why I Pivoted to GNNs"*](https://aryan355-pr.github.io/journal.html) in the Technical Journal, analyzing the variance collapse of foundation models and the mathematical necessity of circular ring priors.
+*   **[Feb 2026]** — **Core Architectural Pivot**: Formulated non-Euclidean Graph Neural Network architecture with localized receptive fields ($k=2$, $13^\circ$ window) for continuous anatomical ring regression.
+*   **[Nov 2025]** — **Compute Grant**: Secured national supercomputing allocation on the **PARAM Rudra (CDAC)** cluster for high-performance geometric vision pipelines.
+
 ---
 
 ## 🔬 Research Thesis
@@ -32,8 +34,8 @@ My work identifies and addresses architectural inefficiencies in **Medical Imagi
 | :--- | :--- | :--- |
 | **Core Router** | Seamless SPA Interceptor | Zero-reload navigation for instant knowledge retrieval. |
 | **UI Engine** | Glassmorphic Design System | Persistence-aware themes (Light/Dark) with localized tokens. |
-| **Archive** | Dynamic Status Filtering | Real-time categorization of Ongoing vs. Completed research. |
-| **Verification** | Milestone Carousel | Visual, non-interactive proof of grants and submissions. |
+| **Archive** | Dynamic Status Filtering | Real-time categorization of Ongoing vs. Completed research with interactive BibTeX citing. |
+| **Milestones** | Academic News Feed | Clean, real-time logging of peer-reviewed acceptances, compute grants, and submissions. |
 | **Journal** | High-Fidelity Logging | Distraction-free research logs with full MathJax/LaTeX support. |
 
 ---
